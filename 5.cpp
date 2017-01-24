@@ -24,7 +24,7 @@ int main() {
 	const int N=10, M=5;
 	int** A;
 	srand(time(NULL));
-	//создаем массив
+	//инициализируем массив
 	A = new int* [N];
 	for (int i=0; i<N; i++)
 		A[i] = new int [M];
