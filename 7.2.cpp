@@ -4,11 +4,9 @@
 using namespace std;
 
 double f(double x) {
-	//return ((x-5)*(x-5)*(x-5)+2*x-3);
 	return (pow(x,2) - 3*x + 4/2.3);
 }
 double df(double x) {
-	//return (3*x*x-30*x+77);           
 	return (2*x-3);
 }
 int main()

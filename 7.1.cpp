@@ -4,8 +4,7 @@
 using namespace std;
 
 double f(double x) {
-//return ((x-5)*(x-5)*(x-5)+2*x-3);
-return (pow(x,2) - 3*x + 4/2.3);
+	return (pow(x,2) - 3*x + 4/2.3);
 }
 
 int main() {
