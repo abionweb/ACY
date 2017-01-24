@@ -4,7 +4,7 @@
 using namespace std;
 
 double fi(double x) {
-	//РСЃС…РѕРґРЅР°СЏ С„СѓРЅРєС†РёСЏ: f(x) = x*x - 3*x + 4/2.3
+	//Исходная функция: f(x) = x*x - 3*x + 4/2.3
 	return (3 - 4/(2.3*x));
 }
  
