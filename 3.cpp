@@ -1,6 +1,6 @@
 #include <iostream>
-#include <math.h>
-#include <iomanip>
+#include <math.h> //sin fabs log
+#include <iomanip> //setprecision
 
 using namespace std;
 

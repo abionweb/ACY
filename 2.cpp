@@ -8,5 +8,6 @@ int main() {
 			cout << "i: " << i << " s: " << s << endl;
 		}
 	}
+	cout << "the sum of the even numbers from 0 to 99: " << s << endl;
 	return 0;
 }

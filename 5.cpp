@@ -1,6 +1,7 @@
 #include <iostream>
-#include <cstdlib> // СЃРѕРґРµСЂР¶РёС‚ srand() Рё rand()
-//#include <iomanip>
+#include <cstdlib> // srand() и rand()
+#include <time.h>
+
 using namespace std;
 
 void change_rows(int* &a, int* &b) {
@@ -23,7 +24,7 @@ int main() {
 	const int N=10, M=5;
 	int** A;
 	srand(time(NULL));
-	//СЃРѕР·РґР°С‘Рј РјР°СЃСЃРёРІ
+	//создаем массив
 	A = new int* [N];
 	for (int i=0; i<N; i++)
 		A[i] = new int [M];
@@ -33,10 +34,10 @@ int main() {
 			A[i][j] = rand() % 10;
 		}
 	}
-	// РІС‹РІРѕРґ
+	// вывод
 	show_arr(A,N,M); 
-	
-	// СЃРѕСЂС‚РёСЂРѕРІРєР°
+	cout << "Sort the array by 3 column." << endl << endl;
+	// сортировка
 	for (int i = 1;i < N;){
         if (A[i-1][2] > A[i][2]){
             change_rows(A[i-1],A[i]);
@@ -46,7 +47,7 @@ int main() {
         if(i == 0) i++;            
     }
 	
-	// РІС‹РІРѕРґ
+	// вывод
 	show_arr(A,N,M); 
 	
 }

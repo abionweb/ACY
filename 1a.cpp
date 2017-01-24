@@ -1,6 +1,6 @@
 #include <iostream>
-#include <math.h>
-#include <iomanip>
+#include <math.h> //pow
+#include <iomanip> //setprecision
 
 using namespace std;
 
@@ -13,13 +13,12 @@ void output (const char *expression[], float *f, double *d) {
 }
 
 int main() {
-	//system("cls");
 	int prec = 10;
 	float a = 1000, b = 0.001;
 	float f[7]; double d[7];
-	const char *text[size] = {"a-b","(a-b)²","a²","b²","2ab","(a-b)² - (a² -2ab)","result"};
+	const char *text[size] = {"a-b","(a-b)^2","a^2","b^2","2ab","(a-b)^2 - (a^2 -2ab)","result"};
 	
-	cout << endl << "(a - b)² - (a² -2ab)" << endl << "————————————————————" << endl << "         b²" << endl << endl;
+	cout << endl << "(a - b)^2 - (a^2 -2ab)" << endl << "----------------------" << endl << "         b^2" << endl << endl;
 	cout << setprecision(prec);
 	f[0] = a - b;                  d[0] = a - b;
 	f[1] = pow(f[0],2);            d[1] = pow(d[0],2);
