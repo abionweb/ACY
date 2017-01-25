@@ -10,21 +10,24 @@ double y(double x) {
 	return result;
 }
 
-double sn(double x, int n) {
-	double result = 0, AN = cos(x);
+double An(double x, int n) {
+	return (cos(n*x)/n);
+}
 
+double sn(double x, int n) {
+	double result = 0, An;
 	for (int i = 1; i <= n; i++) {
-		AN = AN*(cos(i*x)/i*cos(x));
-		result += AN;
+		An = cos(i*x)/i;
+		result += An;
 	}
 	return result;
 }
 
 double se(double x, double e) {
-	double result = 0, AN=cos(x);
-	for(int i=1; fabs(AN)>=e ; i++){
-		AN=AN*(cos(i*x)/i*cos(x));
-		result+=AN; 
+	double result = 0, An;
+	for(int i=1; fabs(An)>=e ; i++){
+		An = cos(i*x)/i;
+		result += An; 
 	}
 	return result;
 }
