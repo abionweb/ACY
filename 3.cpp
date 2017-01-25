@@ -5,13 +5,7 @@
 using namespace std;
 
 double y(double x) {
-	double result;
-	result = (-1) * (log(fabs(2*sin(x/2))));
-	return result;
-}
-
-double An(double x, int n) {
-	return (cos(n*x)/n);
+	return (-1) * (log(fabs(2*sin(x/2))));
 }
 
 double sn(double x, int n) {
