@@ -18,7 +18,7 @@ double sn(double x, int n) {
 }
 
 double se(double x, double e) {
-	double result = 0, An;
+	double result = 0, An=e+1;
 	for(int i=1; fabs(An)>=e ; i++){
 		An = cos(i*x)/i;
 		result += An; 
