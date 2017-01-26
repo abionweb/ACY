@@ -1,55 +1,52 @@
 program kr2;
 
 uses crt, gettablefromfile;
-const n = 12; p = 5;
+const p = 5;
 type
-	//struct = array[1..p] of integer;
-	arr    = array[1..n, 1..p] of integer;
-	result = array of record
+	arr = array[1..1000, 1..p] of integer;
+	result = array[1..1000] of record
 		subunit, count : integer;
 	end;
 	
-var i, j : integer;
+var i, n : integer; 
 	A : arr;
 	B : result;
-	y : boolean;
+	
+
+procedure searchSubunit(subunit:integer);
+var i : integer = 0;
+begin
+	repeat
+		i:=i+1;
+		if B[i].subunit = subunit then B[i].count := B[i].count + 1;
+		if B[i].subunit = 0 then begin 
+			B[i].subunit := subunit; 
+			B[i].count:= 1; 
+		end;
+	until B[i].subunit = subunit;
+end;
+
+procedure printResult;
+begin
+	writeln('Всего детей: ', n);
+	i := 1;
+	repeat
+	writeln('Подразделение ', B[i].subunit, ': ', B[i].count, ' детей');
+	i := i + 1;
+	until B[i].subunit = 0;
+end;
 
 BEGIN
 clrscr;
-SetLength(B,0);
+
+write('Введите количество строк в таблице: ');
+readln(n);
 
 prepareArray('table.csv', A);
-writeArray(A);
 
-for i := 1 to n do begin //перебираем массив
-	y := true;
+printArray(A);
 
-	
-	{Ищем подразделение в массиве результатов}
-	for j := 0 to length(B)-1 do begin
-		if B[j].subunit = A[i,1] then begin
-			B[j].count := B[j].count + 1;
-			y := false;
-		end;
-	end;
-	
-	
-	
-	{Если подразделение в массиве с результатами не обнаружено, добавляем его}
-	if y then begin 
-		SetLength(B,length(B)+1);
-		B[length(B)-1].subunit := A[i,1];
-		B[length(B)-1].count   := 1;
-	end;
-	
-	
-end;
+for i := 1 to n do searchSubunit(A[i,1]); //перебираем массив
 
-
-{Вывод результатов}
-writeln('Всего детей: ', n);
-for j := 0 to length(B)-1 do writeln('Подразделение ', B[j].subunit, ': ', B[j].count, ' детей');
-
-{Освобождение памяти}
-B := nil;
+printResult;
 END.

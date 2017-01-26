@@ -4,47 +4,46 @@ uses crt;
 	const n = 12; p = 5;
 	type
 		struct = array[1..p] of integer;
-		arr    = array[1..n] of struct;
+		arr    = array[1..1000] of struct;
 	
 	
 	procedure prepareArray(filename: string; var A : arr);
-	procedure readfileline(str: string; var struct : struct);
-	procedure writeArray(A:arr);
+	procedure readFileLine(str: string; var struct : struct);
+	procedure printArray(A:arr);
 implementation
 
 
-	procedure readfileline(str: string; var struct : struct);
-	var istr, istruct, len :integer;
+	procedure readFileLine(str: string; var struct : struct);
+	var istr, len : integer;
+		istruct :integer = 1;
 	Begin
-	istruct := 1;
 	len := length(str);
 	for istr := 1 to len do
-		if str[istr] = ',' 
-		then istruct := istruct + 1
-		else if ((ord(str[istr]) >= 48) and (ord(str[istr]) <= 57))
-			 then struct[istruct] := struct[istruct]*10 + (ord(str[istr])-48);
+		case str[istr] of
+			',': istruct := istruct + 1;
+			'0'..'9': struct[istruct] := struct[istruct]*10 + (ord(str[istr])-48);
+		end;
 	End;
 
 
 
 	procedure prepareArray(filename: string; var A : arr);
-	var i : integer;
+	var i : integer = 1;
 		f : text;
 		s : string;
 	begin
 	assign(f,filename);
 	reset(f);
-	i := 1;
 	while not eof(f) do
 		begin
 		readln(f,s);
-		readfileline(s,A[i]);
+		readFileLine(s,A[i]);
 		i := i + 1;
 		end;
 	end;
 	
 	
-	procedure writeArray(A:arr);
+	procedure printArray(A:arr);
 	var i,j : integer;
 	begin
 	for i := 1 to n do
