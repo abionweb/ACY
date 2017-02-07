@@ -1,25 +1,35 @@
 #include <iostream>
-#include <math.h>
-#include <iomanip>
+#include <complex>
+
 using namespace std;
 
-double f(double x) {
-	return (pow(x,2) - 3*x + 4/2.3);
+float zplus(int n, float a[]) {
+	float result = 0;
+	for (int i=0; i<n; i++) {
+		result += a[i];
+	}
+	return result;
+}
+
+complex<double> zplus(int n, complex<double> a[]) {
+	complex<double> result = 0;
+	for (int i=0; i<n; i++) {
+		result += a[i];
+	}
+	return result;
 }
 
 int main() {
-double a = 1, b = 4, e = 0.000001, x; int k=0, prec=10;
-cout << setprecision(prec);
-cout<<"y=(x-5)^3+2x-3\n" << "a: " << a << "\nb: " << b << "\ne: 0.000001\n";
-x=(a+b)/2;
-cout << "X:"<< x << "\n";
-while(fabs(b-a)>e) {
-	if(f(a)*f(x)<=0) b=x;
-	else a=x;
-	x=(a+b)/2;
-	k++;
-	cout << "k: " << k << "\tX: "  << x << "\t|b-a|: " << fabs(b-a) << "\n";
-} 
-cout << "\nX: " << x << "\n";
-return 0;
+	float x[6]={10, 20, 30.43, 40, 50, 60.22};
+	complex< double > y[6] = {
+		complex< double >( 28, 33 ),
+		complex< double >( 77, 31 ),
+		complex< double >( 45, 95 ),
+		complex< double >( 22, 80 ),
+		complex< double >( 50, 10 ),
+		complex< double >( 13, -3 )
+	};
+	cout << "\nThe sum of    real numbers is  " << zplus(6,x) << '\n';
+	cout << "The sum of complex numbers is " << zplus(6,y) << "\n\n";
+	return 0;
 }
