@@ -27,7 +27,7 @@ int main() {
 		complex< double >( 45, 95 ),
 		complex< double >( 22, 80 ),
 		complex< double >( 50, 10 ),
-		complex< double >( 13, -3 )
+		complex< double >( 13, -30 )
 	};
 	cout << "\nThe sum of    real numbers is  " << zplus(6,x) << '\n';
 	cout << "The sum of complex numbers is " << zplus(6,y) << "\n\n";
