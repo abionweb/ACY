@@ -1,0 +1,11 @@
+$ cat .gitignore
+*
+!*/
+!*.pas
+!*.cpp
+!*.h
+!.gitignore
+/informatika/cpp/*/build/
+/informatika/cpp/*/dist/
+/informatika/cpp/*/nbproject/
+/informatika/cpp/*/Makefile
