@@ -8,4 +8,4 @@ $ cat .gitignore
 /informatika/cpp/*/build/
 /informatika/cpp/*/dist/
 
-/informatika/cpp/*/Makefile
+
