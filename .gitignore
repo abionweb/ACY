@@ -7,5 +7,5 @@ $ cat .gitignore
 !.gitignore
 /informatika/cpp/*/build/
 /informatika/cpp/*/dist/
-/informatika/cpp/*/nbproject/
+
 /informatika/cpp/*/Makefile
