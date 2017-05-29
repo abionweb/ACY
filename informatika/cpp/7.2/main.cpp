@@ -17,20 +17,8 @@
 using namespace std;
 
 float mult (int count, double k, ...) {
-    //cout << "\n";
     double *p = &k, s=1;
-    //cout << "\t" << s << "\t" << p << "\t" << *p << "\n";/**/
-    
-    
-            
-    for (; count!=0; count--) {
-        s = s * (*(p++));
-        /*cout << "\t" << s;
-        cout << "\t" << ++p;
-        cout << "\t" << *p;
-        
-        cout << "\n";/**/
-    }
+    for (; count!=0; count--) s = s * (*(p++));
     return s;
 }
 
