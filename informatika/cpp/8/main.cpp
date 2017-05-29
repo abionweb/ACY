@@ -127,6 +127,7 @@ int copy(const char *file_from_name, const char *file_to_name) {
     } while (!feof(from));
     fclose(from);
     fclose(to);
+    return 0;
 }
 
 int del_by_key(const char *filename, char *del) {
@@ -153,6 +154,7 @@ int del_by_key(const char *filename, char *del) {
     fclose(buf);
     
     copy(buf_name, filename);
+    return 0;
 }
 
 int add_after_index (const char *filename, record add, int index) {
@@ -185,6 +187,7 @@ int add_after_index (const char *filename, record add, int index) {
     fclose(buf);
     
     copy(buf_name, filename);
+    return 0;
 }
 
 int main() {//-----------Главная функция--------------------------------------------||
@@ -211,4 +214,5 @@ int main() {//-----------Главная функция--------------------------
     cout << "Enter index of the record: ";        cin >> index;       
     add_after_index(file, add, index);
     file_print(file);
+    return 0;
 }
