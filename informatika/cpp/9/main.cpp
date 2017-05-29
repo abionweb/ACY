@@ -20,16 +20,8 @@
 
 using namespace std;
 
-struct record
-{  char name[100];
-   char post[40];
-   int birthday;
-   float salary;
-};
-
 int file_init(const char *filename, int n) {
-    int k;
-    int maxline = 6;
+    int k, maxline = 6;
     char txt[maxline+2];
     srand(time(NULL));
     FILE *f1;
@@ -39,7 +31,7 @@ int file_init(const char *filename, int n) {
         exit(1);
     };
     
-    for( int i = 0; i < n; i++ ){
+    for( int i = 0; i < n; i++ ) {
         for( int j = 0; j < maxline; j++) {
             if (rand() % 4 == 1) { txt[j] = ' '; }
                 else txt[j] = (rand() % 5) + 65;
@@ -58,16 +50,16 @@ int file_print(const char *filename) {
     char txt[maxline];
     
     if ((f = fopen(filename ,"r")) == NULL) {
-        perror("error: rb");
+        perror("error: r");
         exit(1);
     };
-    cout << "\n\n" << filename << ":\n\n";
+    cout << filename << ":\n-------\n";
     while (fgets(txt, maxline, f) != NULL) {
         cout << txt;
     }
     
     fclose(f);
-    cout << "\n";
+    cout << "\n\n";
     return 0;
 }
 
@@ -77,7 +69,7 @@ int file_copy_first_A(const char *filename1, const char *filename2) {
     char buf[maxline+2];
     
     if ((f1 = fopen(filename1 ,"r")) == NULL) {
-        perror("error: rb");
+        perror("error: r");
         exit(1);
     };
     if ((f2 = fopen(filename2 ,"w")) == NULL) {
@@ -91,6 +83,7 @@ int file_copy_first_A(const char *filename1, const char *filename2) {
     }
     fclose(f1);
     fclose(f2);
+    return 0;
 }
 
 int file_word_count_F2(const char *filename2) {
@@ -98,8 +91,8 @@ int file_word_count_F2(const char *filename2) {
     int count = 0, maxline = 7;
     char buf[maxline+2], *pstr;
     if ((f2 = fopen(filename2 ,"r")) == NULL) {
-        perror("error: rb");
-        exit(1);
+        perror("error: r");
+        exit(0);
     };
     while (fgets (buf, maxline+2, f2)!=NULL) {
         pstr=strtok(buf," ");
@@ -121,4 +114,5 @@ int main() {//-----------Главная функция--------------------------
     file_copy_first_A(f1,f2);
     file_print(f2);
     cout << "Word count: " << file_word_count_F2(f2) << "\n";
+    return 0;
 }
