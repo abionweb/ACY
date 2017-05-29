@@ -7,21 +7,21 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=GNU-Linux
-CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
+CND_PLATFORM_Debug=MinGW_1-Windows
+CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW_1-Windows
 CND_ARTIFACT_NAME_Debug=10
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/10
-CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW_1-Windows/10
+CND_PACKAGE_DIR_Debug=dist/Debug/MinGW_1-Windows/package
 CND_PACKAGE_NAME_Debug=10.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/10.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW_1-Windows/package/10.tar
 # Release configuration
-CND_PLATFORM_Release=GNU-Linux
-CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
+CND_PLATFORM_Release=MinGW_1-Windows
+CND_ARTIFACT_DIR_Release=dist/Release/MinGW_1-Windows
 CND_ARTIFACT_NAME_Release=10
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/10
-CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW_1-Windows/10
+CND_PACKAGE_DIR_Release=dist/Release/MinGW_1-Windows/package
 CND_PACKAGE_NAME_Release=10.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/10.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW_1-Windows/package/10.tar
 #
 # include compiler specific variables
 #
