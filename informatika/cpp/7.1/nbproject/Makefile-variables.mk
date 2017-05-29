@@ -15,13 +15,13 @@ CND_PACKAGE_DIR_Debug=dist/Debug/MinGW_1-Windows/package
 CND_PACKAGE_NAME_Debug=7.1.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/MinGW_1-Windows/package/7.1.tar
 # Release configuration
-CND_PLATFORM_Release=MinGW_1-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/MinGW_1-Windows
+CND_PLATFORM_Release=GNU-Linux
+CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
 CND_ARTIFACT_NAME_Release=7.1
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW_1-Windows/7.1
-CND_PACKAGE_DIR_Release=dist/Release/MinGW_1-Windows/package
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/7.1
+CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
 CND_PACKAGE_NAME_Release=7.1.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW_1-Windows/package/7.1.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/7.1.tar
 #
 # include compiler specific variables
 #

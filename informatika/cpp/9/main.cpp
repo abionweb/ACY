@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include <stdio.h> // для работы с файлами
+#include <string.h>
 #include <cstdlib>
 #include <cstring>
 //#include <math.h>
@@ -39,7 +40,10 @@ int file_init(const char *filename, int n) {
     };
     
     for( int i = 0; i < n; i++ ){
-        for( int j = 0; j < maxline; j++) txt[j] = (rand() % 5) + 65;
+        for( int j = 0; j < maxline; j++) {
+            if (rand() % 4 == 1) { txt[j] = ' '; }
+                else txt[j] = (rand() % 5) + 65;
+        }
         txt[maxline] = '\n';
         txt[maxline+1]   = '\0';
         fputs(txt,f1);
@@ -57,7 +61,7 @@ int file_print(const char *filename) {
         perror("error: rb");
         exit(1);
     };
-    
+    cout << "\n\n" << filename << ":\n\n";
     while (fgets(txt, maxline, f) != NULL) {
         cout << txt;
     }
@@ -89,12 +93,32 @@ int file_copy_first_A(const char *filename1, const char *filename2) {
     fclose(f2);
 }
 
+int file_word_count_F2(const char *filename2) {
+    FILE *f2;
+    int count = 0, maxline = 7;
+    char buf[maxline+2], *pstr;
+    if ((f2 = fopen(filename2 ,"r")) == NULL) {
+        perror("error: rb");
+        exit(1);
+    };
+    while (fgets (buf, maxline+2, f2)!=NULL) {
+        pstr=strtok(buf," ");
+        while ((pstr!=NULL) && (strcmp(pstr, "\n"))) {
+          count++;
+          pstr=strtok(NULL," ");
+        }
+    }
+    fclose(f2);
+    return count;
+}
+
 int main() {//-----------Главная функция--------------------------------------------||
     const char *f1 = "f1.txt"; // filename
     const char *f2 = "f2.txt";
-    int n = 10; // record count
+    int n = 20; // record count
     file_init(f1, n);
     file_print(f1);
     file_copy_first_A(f1,f2);
     file_print(f2);
+    cout << "Word count: " << file_word_count_F2(f2) << "\n";
 }
