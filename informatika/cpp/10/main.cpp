@@ -73,4 +73,5 @@ int main() {//-----------Главная функция--------------------------
     array_print(array, count);
     
     delete[] array;
+    return 0;
 }
