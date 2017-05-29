@@ -219,4 +219,5 @@ int main() {//-----------Главная функция--------------------------
     point_print(p);
     
     p = point_remove(p);
+    return 0;
 }
