@@ -14,7 +14,6 @@
 #include <cstdlib>
 #include <iostream>
 #include "fraction.h"
-
 using namespace std;
 
 fraction make_fraction(int denomination, int count) {

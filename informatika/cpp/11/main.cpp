@@ -160,7 +160,7 @@ point* point_backup(point *first, const char *filename) {
     FILE *file;
     if ((file = fopen(filename ,"rb")) == NULL) {
         perror("error: rb");
-        exit(1);
+        return first;
     };
     point *p = new(point);
     fread(p, sizeof(point),1,file);

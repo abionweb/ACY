@@ -4,13 +4,13 @@
     <logicalFolder name="SourceFiles"
                    displayName="Исходные файлы"
                    projectFiles="true">
-      <itemPath>book.cpp</itemPath>
+      <itemPath>Time.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="HeaderFiles"
                    displayName="Файлы заголовков"
                    projectFiles="true">
-      <itemPath>book.h</itemPath>
+      <itemPath>Time.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Файлы ресурсов"
@@ -38,9 +38,9 @@
       </toolsSet>
       <compileType>
       </compileType>
-      <item path="book.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Time.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="book.h" ex="false" tool="3" flavor2="0">
+      <item path="Time.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -65,9 +65,9 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="book.cpp" ex="false" tool="1" flavor2="0">
+      <item path="Time.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="book.h" ex="false" tool="3" flavor2="0">
+      <item path="Time.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
