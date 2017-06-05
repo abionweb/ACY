@@ -1,15 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   book.cpp
- * Author: pavel
- * 
- * Created on 29 мая 2017 г., 23:58
- */
 #include <iostream>
 #include <string>
 #include "book.h"
