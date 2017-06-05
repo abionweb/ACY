@@ -15,18 +15,11 @@
 #define FRACTION_H
 
 struct fraction {
-//public:
     int first, second;
     int Init(int, int);
     int Read();
     void Show();
     int summa();
-    
-    /*fraction();
-    fraction(const fraction& orig);
-    virtual ~fraction();*/
-//private:
-
 };
 
 #endif /* FRACTION_H */

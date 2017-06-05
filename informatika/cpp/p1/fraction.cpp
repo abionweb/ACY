@@ -1,16 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   fraction.cpp
- * Author: pavel
- * 
- * Created on 28 мая 2017 г., 3:49
- */
-
 #include "fraction.h"
 #include <iostream>
 
@@ -65,15 +52,3 @@ void fraction::Show() {
 int fraction::summa() {
     return first * second;
 }
-
-
-/*fraction::fraction() {
-}
-
-fraction::fraction(const fraction& orig) {
-}
-
-fraction::~fraction() {
-}
-
-*/
