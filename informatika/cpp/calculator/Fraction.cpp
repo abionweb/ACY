@@ -19,13 +19,28 @@ Fraction::~Fraction() {
 }
 
 std::istream& operator >> (std::istream& in, Fraction& f) {
-	in >> f.str;
-	std::cout << f.str;
-    //cout << "first: "; in >> p.first;
-    //cout << "second: "; in >> p.second;
-    return in;
+	std::string::size_type slash_position, dot_position, comma_position;
+	std::string fraction_string;
+
+	in >> fraction_string; //f.str;
+	slash_position = fraction_string.find('/');
+	dot_position   = fraction_string.find('.');
+	comma_position = fraction_string.find(',');
+
+	switch ( std::string::npos ) {
+		case slash_position:
+			// переводим в double
+		case dot_position:
+			// переводим в double
+		case comma_position:
+			// переводим в double
+	}
+
+	std::cout << fraction_string;
+	return in;
 }
 
 std::ostream &operator << (std::ostream& out, const Fraction& f) {
+	return out;
     //return (out << p.first << " " << p.second);
 }
