@@ -5,14 +5,14 @@
  *      Author: Pavel.Bogdanov
  */
 
-#include "calculator.h"
+#include "Calc.h"
 
-calculator::calculator() {
+Calc::Calc() {
 	// TODO Auto-generated constructor stub
 
 }
 
-calculator::~calculator() {
+Calc::~Calc() {
 	// TODO Auto-generated destructor stub
 }
 
