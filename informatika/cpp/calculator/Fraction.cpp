@@ -1,7 +1,7 @@
 /*
  * Fraction.cpp
  *
- *  Created on: 20 нояб. 2017 г.
+ *  Created on: 20 РЅРѕСЏР±. 2017 Рі.
  *      Author: Pavel.Bogdanov
  */
 
@@ -28,12 +28,12 @@ std::istream& operator >> (std::istream& in, Fraction& f) {
 	comma_position = fraction_string.find(',');
 
 	switch ( std::string::npos ) {
-		case slash_position:
-			// переводим в double
-		case dot_position:
-			// переводим в double
-		case comma_position:
-			// переводим в double
+//		case slash_position:
+			// РїРµСЂРµРІРѕРґРёРј РІ double
+		//case dot_position:
+			// РїРµСЂРµРІРѕРґРёРј РІ double
+		//case comma_position:
+			// РїРµСЂРµРІРѕРґРёРј РІ double
 	}
 
 	std::cout << fraction_string;
