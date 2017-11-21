@@ -7,6 +7,9 @@
 
 #ifndef CALC_H_
 #define CALC_H_
+
+#include <string>
+#include "Fraction.h"
 /* класс должен хранить 2 операнда и результат - простые дроби
  * в виде трех числителей (op1_numerator, op2_numerator, result_numerator)
  * и трех знаменателей (op1_denominator, op2_denominator, result_denominator)
@@ -16,22 +19,20 @@
  *
  */
 class Calc {
+	Fraction op1, op2, res;
+	int action, form;
 public:
 	Calc();
 	virtual ~Calc();
 
+	void set_op1(std::string string);
+	void set_op2(std::string string);
 
-
-	int op1_numerator, op1_denominator,
-		op2_numerator, op2_denominator,
-		result_numerator, result_denominator,
-		action
-		;
-//	void set_op1(string);
-//	void set_op2(string);
 	void set_action(int);
 	void set_form(int);
-	double get_result();
+
+	Fraction get_result();
+
 	void execute();
 };
 
