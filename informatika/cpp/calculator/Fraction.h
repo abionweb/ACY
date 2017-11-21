@@ -14,8 +14,8 @@ using namespace std;
 
 class Fraction {
 public:
-	Fraction();
-	virtual ~Fraction();
+	Fraction() {};
+	virtual ~Fraction() {};
 
 	float fract;
 
