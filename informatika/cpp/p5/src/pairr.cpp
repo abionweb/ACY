@@ -22,9 +22,11 @@ pairr& pairr::operator = (const pairr& p) {
     return *this;
 }
 
-istream& operator >> (istream& in, pairr& p) {
-    cout << "first: "; in >> p.first;
-    cout << "second: "; in >> p.second;
+istream& operator>>(istream& in, pairr& p) {
+	cout << "Enter a pair of numbers: " << endl;
+    cout << "First: "; in >> p.first;
+    cout << "Second: "; in >> p.second;
+    cout << endl;
     return in;
 }
 
@@ -33,7 +35,9 @@ ostream &operator << (ostream& out, const pairr& p) {
 }
 
 void pairr::show() {
-	cout << first << " " << second << endl;
+	cout << "First number: "       << first << endl;
+	cout << "Second number: "      << second << endl;
+	cout << "Product of numbers: " << get_product() << endl;
 }
 
 int pairr::get_product() {

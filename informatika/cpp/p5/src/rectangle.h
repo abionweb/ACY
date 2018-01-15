@@ -13,7 +13,7 @@
 
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
-#pragma once
+
 #include "pairr.h"
 
 class rectangle : public pairr {
@@ -24,8 +24,12 @@ public:
     rectangle(const rectangle& r) {};
     ~rectangle(void) {};
     
+    friend istream& operator>>(istream& in, rectangle& p);
+
     int get_area();
     int get_perimeter();
+
+    void show();
 private:
 
 };
