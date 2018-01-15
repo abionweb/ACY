@@ -1,16 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   rectangle.cpp
- * Author: pavel
- * 
- * Created on 5 июня 2017 г., 3:04
- */
-
 #include "rectangle.h"
 
 istream& operator>>(istream& in, rectangle& p) {
@@ -32,5 +19,5 @@ void rectangle::show() {
 	cout << "Width: "     << first           << endl;
 	cout << "Height: "    << second          << endl;
 	cout << "Perimeter: " << get_perimeter() << endl;
-	cout << "Area: "      << get_area()      << endl;
+	cout << "Area: "      << get_area()      << endl << endl;
 }
