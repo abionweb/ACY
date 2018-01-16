@@ -17,9 +17,6 @@ public:
     int get_perimeter();
 
     void show();
-private:
-
 };
 
 #endif /* RECTANGLE_H */
-

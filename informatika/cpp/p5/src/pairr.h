@@ -27,9 +27,4 @@ public:
 
     int get_product();
 
-private:
-
-};
-
 #endif /* PAIRR_H */
-
