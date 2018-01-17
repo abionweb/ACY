@@ -7,18 +7,19 @@
 
 #ifndef VECTOR_H_
 #define VECTOR_H_
-
-namespace std {
+#include <iostream>
+using namespace std;
 
 class vector {
 public:
 	vector(int s, int k=0);
-	vector(const vector&a)
+	vector(const vector&a);
 	~vector();
 	vector&operator=(const vector&a);
 	int&operator[](int index);
 	vector operator+(const int k);
-	int operator();
+	vector operator+(const vector&a);
+	int operator () ();
 	friend ostream& operator<<(ostream& out, const vector&a);
 	friend istream& operator>>(istream& in, vector&a);
 private:
@@ -26,6 +27,6 @@ private:
 	int*data;
 };
 
-} /* namespace std */
+
 
 #endif /* VECTOR_H_ */

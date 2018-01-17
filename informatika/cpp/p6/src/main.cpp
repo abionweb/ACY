@@ -1,24 +1,31 @@
 #include <cstdlib>
 #include <iostream>
-#include "vector.h";
+#include "vector.h"
 
 using namespace std;
 
 int main() {
-	vector v(5);
-	/*Object *p;
+	vector a(5);
+	cout << "a: " << a << endl;
+	cin >> a;
+	cout << "a: " << a << endl;
+	a[2] = 100;
+	cout << "a: " << a << endl;
 
-    pairr a;
-    cin >> a;
-    p = &a;
-    v.add(p);
+	vector b(10);
+	cout << "b: " << b << endl;
+	b = a;
+	cout << "b: " << b << endl;
 
-    rectangle b;
-    cin >> b;
-    p = &b;
-    v.add(p);
+	vector c(10);
+	c = b + 100;
+	cout << "c: " << c << endl;
 
-    cout << v;*/
+	vector d(5);
+	d = a + c;
+	cout << "d: " << d << endl;
+
+	cout << endl << "the length of a =" << a() << endl;
     return 0;
 }
 
