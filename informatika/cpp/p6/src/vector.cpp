@@ -15,6 +15,8 @@ vector::vector(int s, int k) {
 	for (int i=0; i<size; i++) {
 		data[i] = k;
 	}
+	beg.elem = &data[0];
+	end.elem = &data[size];
 }
 
 vector::vector(const vector&a) {
@@ -23,6 +25,8 @@ vector::vector(const vector&a) {
 	for (int i=0; i<size; i++) {
 		data[i] = a.data[i];
 	}
+	beg = a.beg;
+	end = a.end;
 }
 
 vector::~vector() {
@@ -36,6 +40,8 @@ vector&vector::operator =(const vector&a) {
 	if (data!=0) delete[]data;
 	data = new int[size];
 	for(int i=0; i<size; i++) data[i] = a.data[i];
+	beg = a.beg;
+	end = a.end;
 	return *this;
 }
 
@@ -54,8 +60,16 @@ vector vector::operator+(const int k) {
 }
 
 vector vector::operator+(const vector&a) {
-	vector temp(size);
-	for (int i=0; i<size; ++i) temp.data[i] = data[i] + a.data[i];
+	int max, min;
+	vector temp(1);
+	if (size > a.size) {
+		min = a.size;
+		temp = *this;
+	} else {
+		min = size;
+		temp = a;
+	}
+	for (int i=0; i<min; ++i) temp.data[i] = data[i] + a.data[i];
 	return temp;
 }
 
