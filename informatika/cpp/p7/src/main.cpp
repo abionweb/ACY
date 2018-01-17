@@ -1,11 +1,5 @@
-//============================================================================
-// Name        : p7.cpp
-// Author      : 
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
-//============================================================================
 #include "vector.h"
+#include "time.h"
 #include <iostream>
 
 using namespace std;
@@ -25,5 +19,15 @@ int main() {
 	b = a + 10;
 	cout << "b = a + 10;" << endl << "b: " <<  b << endl;
 
+	Vector <int> c(10,5);
+	cout << endl << "c: " << c << endl;
+	Vector <int> d(1,0);
+	cout << "d: " << d << endl << "d = b + c;" << endl;
+	d = b + c;
+	cout << "d: " << d << endl << endl;
+
+	time t;
+	cin >> t;
+	cout << t;
 	return 0;
 }

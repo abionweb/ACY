@@ -70,8 +70,8 @@ Vector<T> Vector<T>::operator+(const T k) {
 
 template <class T>
 Vector<T> Vector<T>::operator+(const Vector<T>&a) {
-	int max, min;
-	Vector<T> temp(1);
+	int min;
+	Vector<T> temp(1,0);
 	if (size > a.size) {
 		min = a.size;
 		temp = *this;
