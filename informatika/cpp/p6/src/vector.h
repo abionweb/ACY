@@ -1,10 +1,3 @@
-/*
- * vector.h
- *
- *  Created on: 17 янв. 2018 г.
- *      Author: Павел
- */
-
 #ifndef VECTOR_H_
 #define VECTOR_H_
 #include <iostream>
@@ -45,7 +38,5 @@ private:
 	Iterator beg;
 	Iterator end;
 };
-
-
 
 #endif /* VECTOR_H_ */
