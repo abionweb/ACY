@@ -28,6 +28,33 @@ int main() {
 
 	time t;
 	cin >> t;
-	cout << t;
+	cout << "t: " << t << endl;
+
+	int k;
+	cout << "How many seconds to add: ";
+	cin >> k;
+	time p;
+	p = t + k;
+	cout << "Result: " << p << endl;
+	time o;
+	cout << "How many time to add? " << endl;
+	cin >> o;
+	time u;
+	u = p + o;
+	cout << "Result: " << u << endl;
+
+	Vector <time> at(5,u);
+	cout << "Enter time 5 times: " << endl;
+	cin >> at;
+	cout << "at: " << at << endl;
+	cout << "at[2]: " << at[2] << endl;
+	cout << "The length of at = " << at() << endl;
+
+	Vector <time> bt(10,t);
+	cout << endl << "bt: " << bt << endl << "bt = at;" << endl;
+	bt = at;
+	cout << "bt: " << bt << endl << "bt = at + t;" << endl;
+	bt = at + t;
+	cout << "bt: " << bt << endl;
 	return 0;
 }

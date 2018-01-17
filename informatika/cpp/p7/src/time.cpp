@@ -34,3 +34,17 @@ istream& operator >> (istream &in, time&t) {
 	in >> t.sec;
 	return in;
 }
+
+time time::operator+(int k) {
+	int t=min*60+sec + k;
+	time temp(t/60,t%60);
+	return temp;
+}
+
+time time::operator+(time k) {
+	int t=min*60+sec;
+	int lt = k.min*60+k.sec;
+	t+=lt;
+	time temp(t/60,t%60);
+	return temp;
+}

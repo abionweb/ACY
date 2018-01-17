@@ -12,6 +12,8 @@ public:
 	friend ostream& operator << (ostream& out, const time&);
 	friend istream& operator >> (istream& in, time&);
 	virtual ~time(void){};
+	time operator+(int k);
+	time operator+(time k);
 private:
 	int min, sec;
 };
