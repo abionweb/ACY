@@ -8,6 +8,7 @@ const int cmDel = 2;
 const int cmGet = 3;
 const int cmShow= 4;
 const int cmMake= 6;
+const int cmGetName = 7;
 const int cmQuit= 101;
 
 struct TEvent {

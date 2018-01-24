@@ -70,9 +70,16 @@ void Vector::Del() {
 void Vector::HandleEvent(const TEvent& e) {
 	if(e.what==evMessage) {
 		Object**p=beg;
-		for (int i=0; i<cur; i++) {
-			(*p)->HandleEvent(e);
-			p++;
+		switch (e.command) {
+			case cmGetName:
+				p = p + e.a;
+				(*p)->HandleEvent(e);
+				break;
+			default:
+				for (int i=0; i<cur; i++) {
+					(*p)->HandleEvent(e);
+					p++;
+				}
 		}
 	}
 }

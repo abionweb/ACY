@@ -49,7 +49,9 @@ void Person::HandleEvent(const TEvent& e) {
 	if (e.what==evMessage) {
 		switch (e.command) {
 		case cmGet:
-			cout << "age="<< get_age() << endl;
+			cout << "age=" << get_age() << endl; break;
+		case cmGetName:
+			cout << "name=" << get_name() << endl; break;
 		}
 	}
 }

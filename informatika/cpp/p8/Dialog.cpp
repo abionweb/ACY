@@ -26,6 +26,7 @@ void Dialog::GetEvent(TEvent &event) {
 			case '?': event.command=cmShow; break;
 			case 'q': event.command=cmQuit; break;
 			case '/': event.command=cmGet; break;
+			case 'z': event.command=cmGetName; break;
 		}
 		if (s.length()>1) {
 			param = s.substr(1,s.length()-1);
