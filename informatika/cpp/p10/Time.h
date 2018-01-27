@@ -13,6 +13,13 @@ public:
 	Time operator = (const Time&);
 	friend ostream& operator << (ostream &out, const Time& t);
 	friend istream& operator >> (istream &out, Time& t);
+	const bool operator == (const Time& t2);
+	const bool operator != (const Time& t2);
+	const bool operator < (const Time& t2);
+	Time operator-(Time k);
+
+	friend fstream& operator >> (fstream& fin, Time& t);
+	friend fstream& operator << (fstream& fout, const Time& t);
 	~Time();
 private:
 	int minutes, seconds;
