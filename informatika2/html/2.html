@@ -1,0 +1,105 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Встроенные типы данных VBA</h1>
+<table border="2" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td><p><strong>Тип данных </strong></p></td>
+    <td><p><strong>Резервируется байт </strong></p></td>
+    <td><p><strong>Наименьшее значение </strong></p></td>
+    <td><p><strong>Наибольшее значение </strong></p></td>
+  </tr>
+  <tr>
+    <td><p>Byte </p></td>
+    <td><p>1 </p></td>
+    <td><p>0 </p></td>
+    <td><p>255 </p></td>
+  </tr>
+  <tr>
+    <td><p>Boolean </p></td>
+    <td><p>2 </p></td>
+    <td><p>False (Ложь) </p></td>
+    <td><p>True (Истина) </p></td>
+  </tr>
+  <tr>
+    <td><p>Integer </p></td>
+    <td><p>2 </p></td>
+    <td><p>-32768 </p></td>
+    <td><p>32767 </p></td>
+  </tr>
+  <tr>
+    <td><p>Long </p></td>
+    <td><p>4 </p></td>
+    <td><p>-2147483648 </p></td>
+    <td><p>2147483647 </p></td>
+  </tr>
+  <tr>
+    <td><p>Single </p></td>
+    <td><p>4 </p></td>
+    <td><p>-3.402823 Е38 </p></td>
+    <td><p>-1.401298 Е-45 </p></td>
+  </tr>
+  <tr>
+    <td><p>Double </p></td>
+    <td><p>8 </p></td>
+    <td><p>-1,79769313486232Е308 </p></td>
+    <td><p>-4,94065645341247Е-324 </p></td>
+  </tr>
+  <tr>
+    <td><p>Currency </p></td>
+    <td><p>8 </p></td>
+    <td><p>-922337203685477,5808 </p></td>
+    <td><p>922337203685477,5807 </p></td>
+  </tr>
+  <tr>
+    <td><p>Decimal </p></td>
+    <td><p>14 </p></td>
+    <td><p>+/-79228162514264337593543950335 без десятичных знаков </p></td>
+    <td><p>+/-7,9228162514264337593543950335 с 28-ью знаками после запятой </p></td>
+  </tr>
+  <tr>
+    <td><p>Date </p></td>
+    <td><p>8 </p></td>
+    <td><p>1 января 100 года </p></td>
+    <td><p>31 декабря 9999 года </p></td>
+  </tr>
+  <tr>
+    <td><p>Object </p></td>
+    <td><p>4 </p></td>
+    <td><p>Любая ссылка на объект </p></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><p>string (переменной длины) </p></td>
+    <td><p>10 байт + длина строки </p></td>
+    <td><p>0 </p></td>
+    <td><p>приблизительно 2 млрд </p></td>
+  </tr>
+  <tr>
+    <td><p>string (фиксированной длины) </p></td>
+    <td><p>Длина строки </p></td>
+    <td><p>1 </p></td>
+    <td><p>65400 </p></td>
+  </tr>
+  <tr>
+    <td><p>Variant (числа) </p></td>
+    <td><p>16 </p></td>
+    <td><p>Любое числовое значение в рамках диапазона типа данных Double </p></td>
+	<td></td>
+  </tr>
+  <tr>
+    <td><p>Variant (сим&shy;волы) </p></td>
+    <td><p>22 байта + длина строки </p></td>
+    <td><p>0 </p></td>
+    <td><p>приблизительно 2 млрд </p></td>
+  </tr>
+  <tr>
+    <td><p>Пользовательский </p></td>
+    <td><p>Зависит от типа </p></td>
+    <td><p>Зависит от элемента </p></td>
+	<td></td>
+  </tr>
+</tbody></table>
+</body>
+</html>

@@ -25,6 +25,6 @@ public:
     friend istream& operator>>(istream& in, pairr& p);
     friend ostream& operator<<(ostream& out, const pairr& p);
 
-    int get_product();
+    int get_product(void);
 
 #endif /* PAIRR_H */
