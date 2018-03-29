@@ -33,5 +33,6 @@ int main() {
 	cin >> op4;
 	cout << endl << "Конец";
 
-	exit(0);
+	/*exit(0);*/
+	return 0;
 }
