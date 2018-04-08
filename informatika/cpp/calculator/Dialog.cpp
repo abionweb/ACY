@@ -87,6 +87,9 @@ void Dialog::CalcDialog(void) {
 
 	cout << endl << "Пожалуйста, введите символ операции ( + - * / ): ";
 	cin >> action;
+	c.set_action(action);
+
 	cout << endl << "Пожалуйста, введите символ представления результата ( . / ): ";
 	cin >> form;
+	c.set_form(form);
 }
