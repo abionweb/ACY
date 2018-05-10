@@ -9,36 +9,46 @@
 #include "Fraction.h"
 
 Calc::Calc() { // @suppress("Class members should be properly initialized")
-	std::cout << "123";
-	// TODO Auto-generated constructor stub
+	action = '+';
+	form = '.';
 }
 
 Calc::~Calc() {
-	// TODO Auto-generated destructor stub
 }
 
-void Calc::go(int a) {
-	cout << a;
-}
-void Calc::set_op1(std::string string) {
-	//op1->set_value_from_string(string);
+void Calc::set_op1(std::string str) {
+	op1.set_value_from_string(str);
 }
 
-void Calc::set_op2(std::string string) {
-	//this.op2->set_value_from_string(string);
+void Calc::set_op1(Fraction fraction) {
+	op1 = fraction;
 }
 
-void Calc::set_action(int) {
+void Calc::set_op2(std::string str) {
+	op2.set_value_from_string(str);
 }
 
-void Calc::set_form(int) {
-
+void Calc::set_action(char c) {
+	action = c;
 }
 
-Fraction get_result() {
-
+void Calc::set_form(char c) {
+	form = c;
 }
 
-void execute() {
-
+void Calc::execute() {
+	switch (action) {
+	case '+':
+		res = op1 + op2;
+		break;
+	case '-':
+		res = op1 - op2;
+		break;
+	case '*':
+		res = op1 * op2;
+		break;
+	case '/':
+		res = op1 / op2;
+		break;
+	}
 }

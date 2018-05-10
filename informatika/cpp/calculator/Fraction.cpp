@@ -10,7 +10,13 @@
 #include <string>
 #include <algorithm>
 
-using namespace std;
+void Fraction::set_fract(float f) {
+	fract = f;
+}
+
+float Fraction::get_fract() const {
+	return fract;
+}
 
 void Fraction::set_value_from_string(std::string fraction_string) {
 	fract = 0;
@@ -51,3 +57,28 @@ std::ostream &operator << (std::ostream& out, const Fraction& f) {
 	return out;
     //return (out << p.first << " " << p.second);
 }
+
+Fraction Fraction::operator + (const Fraction& f2) {
+	Fraction result;
+	result.set_fract(fract + f2.get_fract());
+	return result;
+}
+
+Fraction Fraction::operator - (const Fraction& f2) {
+	Fraction result;
+	result.set_fract(fract - f2.get_fract());
+	return result;
+}
+
+Fraction Fraction::operator * (const Fraction& f2) {
+	Fraction result;
+	result.set_fract(fract * f2.get_fract());
+	return result;
+}
+
+Fraction Fraction::operator / (const Fraction& f2) {
+	Fraction result;
+	result.set_fract(fract / f2.get_fract());
+	return result;
+}
+

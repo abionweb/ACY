@@ -10,19 +10,22 @@
 
 #include <iostream>
 #include <string>
-using namespace std;
 
 class Fraction {
 public:
-	Fraction() {};
+	Fraction() {fract=0;};
 	virtual ~Fraction() {};
-
-	float fract;
-
 	void set_value_from_string(std::string fraction_string);
-
+	void set_fract(float f);
+	float get_fract() const;
 	friend std::istream& operator>>(std::istream& in, Fraction& p);
 	friend std::ostream& operator<<(std::ostream& out, const Fraction& p);
+	Fraction operator + (const Fraction& f2);
+	Fraction operator - (const Fraction& f2);
+	Fraction operator * (const Fraction& f2);
+	Fraction operator / (const Fraction& f2);
+private:
+	float fract;
 };
 
 

@@ -6,11 +6,11 @@
 // Description : Calculator
 //============================================================================
 
-#include <iostream>
-#include <string>
+//#include <iostream>
+//#include <string>
 #include "Dialog.h"
-#include "Fraction.h"
-#include "Calc.h"
+//#include "Fraction.h"
+//#include "Calc.h"
 using namespace std;
 
 int main() {

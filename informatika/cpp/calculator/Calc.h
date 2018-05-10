@@ -21,19 +21,23 @@
  */
 class Calc {
 	Fraction op1, op2, res;
-	int action, form;
+	char action, form;
 public:
 	Calc();
 	virtual ~Calc();
 
-	void go(int);
-	void set_op1(string string);
-	void set_op2(string string);
+	void set_op1(std::string str);
+	void set_op1(Fraction fraction);
+	void set_op2(std::string str);
+	void set_action(char c);
+	void set_form(char c);
 
-	void set_action(int);
-	void set_form(int);
+	Fraction get_op1() { return op1; };
+	char get_action()  { return action; };
+	Fraction get_op2() { return op2; };
+	char get_form()    { return form; };
 
-	Fraction get_result();
+	Fraction get_result() { return res; };
 
 	void execute();
 };
