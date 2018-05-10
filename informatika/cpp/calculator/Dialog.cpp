@@ -79,6 +79,7 @@ void Dialog::CalcDialog(void) {
 
 	cout << endl << "Пожалуйста, введите первое число: ";
 	cin >> op1;
+
 	c.set_op1(op1);
 
 	cout << endl << "Пожалуйста, введите второе число: ";

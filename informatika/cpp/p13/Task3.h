@@ -28,24 +28,6 @@ void print_multiset(Multiset_time m) {
 	}
 	cout << endl;
 }
-/*
-Vector_time copy_queue_to_vector(Queue_time q) {
-	Vector_time v;
-	while(!q.empty()) {
-		v.push_back(q.front());
-		q.pop();
-	}
-	return v;
-}
-
-Queue_time copy_vector_to_queue(Vector_time v) {
-	Queue_time q;
-	for (int i = 0; i <v.size() ; i++) {
-		q.push(v[i]);
-	}
-	return q;
-}
-*/
 void Task3() {
 	int n;
 	cout << "Task3" << endl;
