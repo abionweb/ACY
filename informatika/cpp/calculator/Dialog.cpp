@@ -167,4 +167,5 @@ void Dialog::calculate() {
 int Dialog::Valid() {
 	if (EndState == 0) return 0;
 	else return 1;
+
 }
