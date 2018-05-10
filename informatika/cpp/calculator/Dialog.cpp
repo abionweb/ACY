@@ -1,6 +1,8 @@
 #include "Dialog.h"
+using namespace std;
 
-Dialog::Dialog() {
+Dialog::Dialog(void) {
+	EndState = 0;
 }
 
 Dialog::~Dialog() {

@@ -1,12 +1,6 @@
-/*
- * Dialog.h
- *
- *  Created on: 20 но€б. 2017 г.
- *      Author: Pavel.Bogdanov
- */
-
 #ifndef DIALOG_H_
 #define DIALOG_H_
+using namespace std;
 
 #include <iostream>
 #include "Event.h"
@@ -17,9 +11,8 @@ using namespace std;
 class Dialog {
 public:
 	Dialog();
-	virtual ~Dialog();
+	virtual ~Dialog(void);
 	int execute();
-
 protected:
 	int EndState;
 private:

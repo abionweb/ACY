@@ -1,14 +1,7 @@
-/*
- * calculator.cpp
- *
- *  Created on: 16 но€б. 2017 г.
- *      Author: Pavel.Bogdanov
- */
-
 #include "Calc.h"
 #include "Fraction.h"
 
-Calc::Calc() { // @suppress("Class members should be properly initialized")
+Calc::Calc() {
 	action = '+';
 	form = '.';
 }
@@ -39,7 +32,7 @@ void Calc::set_action(char c) {
 }
 
 void Calc::set_form(char c) {
-	p.addRecord('f', form, c);
+	p.addRecord('a', form, c);
 	form = c;
 }
 

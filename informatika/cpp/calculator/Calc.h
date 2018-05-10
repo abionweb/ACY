@@ -1,12 +1,6 @@
-/*
- * calculator.h
- *
- *  Created on: 16 но€б. 2017 г.
- *      Author: Pavel.Bogdanov
- */
-
 #ifndef CALC_H_
 #define CALC_H_
+using namespace std;
 
 #include <string>
 #include "Fraction.h"
@@ -16,8 +10,8 @@ class Calc {
 	Fraction op1, op2, res;
 	char action, form;
 public:
-	Calc();
-	virtual ~Calc();
+	Calc(void);
+	virtual ~Calc(void);
 
 	Protocol p;
 
