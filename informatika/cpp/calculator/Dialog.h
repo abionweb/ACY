@@ -8,18 +8,24 @@
 #ifndef DIALOG_H_
 #define DIALOG_H_
 
-namespace std {
+#include <iostream>
+#include "Event.h"
+using namespace std;
 
 class Dialog {
 public:
 	Dialog();
-
-	void Menu();
-	void doing();
-	void main();
 	virtual ~Dialog();
+	//Calc c;
+	void menu();
+	int execute();
+	void GetEvent (TEvent &event);
+	void HandleEvent (TEvent& event);
+	void ClearEvent (TEvent& event);
+	int Valid();
+	void EndExec();
+protected:
+	int EndState;
 };
-
-} /* namespace std */
 
 #endif /* DIALOG_H_ */

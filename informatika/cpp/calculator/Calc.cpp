@@ -8,7 +8,8 @@
 #include "Calc.h"
 #include "Fraction.h"
 
-Calc::Calc() {
+Calc::Calc() { // @suppress("Class members should be properly initialized")
+	std::cout << "123";
 	// TODO Auto-generated constructor stub
 }
 
@@ -16,11 +17,14 @@ Calc::~Calc() {
 	// TODO Auto-generated destructor stub
 }
 
-void set_op1(std::string string) {
+void Calc::go(int a) {
+	cout << a;
+}
+void Calc::set_op1(std::string string) {
 	//op1->set_value_from_string(string);
 }
 
-void set_op2(std::string string) {
+void Calc::set_op2(std::string string) {
 	//this.op2->set_value_from_string(string);
 }
 
