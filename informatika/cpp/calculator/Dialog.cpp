@@ -1,12 +1,9 @@
 #include "Dialog.h"
 
 Dialog::Dialog() {
-	// TODO Auto-generated constructor stub
-
 }
 
 Dialog::~Dialog() {
-	// TODO Auto-generated destructor stub
 }
 
 int Dialog::execute() {
@@ -20,18 +17,19 @@ int Dialog::execute() {
 }
 
 void Dialog::GetEvent(TEvent &event) {
-	string OpInt = "sp1z2fcq";
+	string OpInt = "sp1z2fcqo";
 	string s;
 	string param;
 	char code;
 
 	cout << endl << "s. Вывести статус калькулятора";
-	cout << endl << "p. Просмотреть протокол работы калькулятора";
 	cout << endl << "1. Ввести первый оператор";
 	cout << endl << "2. Ввести второй оператор";
-	cout << endl << "z. Ввести знак операции";
+	cout << endl << "o. Ввести знак операции";
 	cout << endl << "f. Ввести форму вывода (/ для простой дроби или . для десятичной)";
 	cout << endl << "с. Рассчитать";
+	cout << endl << "p. Просмотреть протокол работы калькулятора";
+	cout << endl << "z. Отменить последний ввод";
 	cout << endl << "q. Завершить работу программы";
 	cout << endl << '>';
 	cin >> s; code = s[0];
@@ -39,12 +37,13 @@ void Dialog::GetEvent(TEvent &event) {
 		event.what = evMessage;
 		switch(code) {
 			case 's': event.command=cmStatus; break;
-			case 'p': event.command=cmProtocol; break;
 			case '1': event.command=cmOp1; break;
-			case 'z': event.command=cmAction; break;
 			case '2': event.command=cmOp2; break;
+			case 'o': event.command=cmAction; break;
 			case 'f': event.command=cmForm; break;
 			case 'c': event.command=cmCalculate; break;
+			case 'p': event.command=cmProtocol; break;
+			case 'z': event.command=cmCancel; break;
 			case 'q': event.command=cmQuit; break;
 		}
 	} else event.what = evNothing;
@@ -55,10 +54,6 @@ void Dialog::HandleEvent(TEvent& event) {
 		switch(event.command) {
 		case cmStatus:
 			printCalc();
-			ClearEvent(event);
-			break;
-		case cmProtocol:
-			cout << "Вывод протокола";
 			ClearEvent(event);
 			break;
 		case cmOp1:
@@ -79,6 +74,15 @@ void Dialog::HandleEvent(TEvent& event) {
 			break;
 		case cmCalculate:
 			calculate();
+			ClearEvent(event);
+			break;
+		case cmProtocol:
+			cout << "Вывод протокола";
+			ClearEvent(event);
+			break;
+		case cmCancel:
+			cout << "Отменяю предыдущую операцию";
+			ClearEvent(event);
 			break;
 		case cmQuit:
 			EndExec();

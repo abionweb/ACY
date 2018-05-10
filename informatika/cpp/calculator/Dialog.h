@@ -18,7 +18,6 @@ class Dialog {
 public:
 	Dialog();
 	virtual ~Dialog();
-//	void menu();
 	int execute();
 
 protected:

@@ -10,21 +10,16 @@
 
 #include <string>
 #include "Fraction.h"
+#include "Protocol.h"
 
-/* класс должен хранить 2 операнда и результат - простые дроби
- * в виде трех числителей (op1_numerator, op2_numerator, result_numerator)
- * и трех знаменателей (op1_denominator, op2_denominator, result_denominator)
- *
- * action знак операции
- * form - код формы для вывода результата
- *
- */
 class Calc {
 	Fraction op1, op2, res;
 	char action, form;
 public:
 	Calc();
 	virtual ~Calc();
+
+	Protocol p;
 
 	void set_op1(std::string str);
 	void set_op1(Fraction fraction);
