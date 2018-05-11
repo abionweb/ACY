@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>
 
 class Fraction {
 public:
@@ -24,8 +25,10 @@ public:
 	Fraction operator - (const Fraction& f2);
 	Fraction operator * (const Fraction& f2);
 	Fraction operator / (const Fraction& f2);
+	std::string get_fraction_string();
 private:
 	float fract;
+	int get_NOD(int a, int b);
 };
 
 

@@ -1,9 +1,6 @@
-//#include <iostream>
-//#include <string>
 #include "Dialog.h"
-//#include "Fraction.h"
-//#include "Calc.h"
-
+#include "Fraction.h"
+#include <iostream>
 using namespace std;
 
 int main() {

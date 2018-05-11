@@ -14,6 +14,7 @@ public:
 	virtual ~Calc(void);
 
 	Protocol p;
+	void undoLastEntry();
 
 	void set_op1(std::string str);
 	void set_op1(Fraction fraction);
@@ -26,8 +27,10 @@ public:
 	Fraction get_op2() { return op2; };
 	char get_form()    { return form; };
 
-	Fraction get_result() { return res; };
+	std::string get_result_string();
+	Fraction get_result_fraction();
 
+	void print_protocol();
 	void execute();
 };
 
