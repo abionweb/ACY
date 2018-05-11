@@ -91,9 +91,13 @@ std::string Fraction::get_fraction_string() {
 	i_chisl = (int)(i_chisl / nod);
 	i_znam  = (int)(i_znam  / nod);
 
-	std::string result = std::to_string(i_cel) + " + ";
-	if (result == "0 + ") result = "";
-	result += std::to_string(i_chisl) + "/" + std::to_string(i_znam);
+	std::string result;
+	if (i_chisl == 0) {
+		result = std::to_string(i_cel);
+	} else {
+		if (i_cel != 0) result = std::to_string(i_cel) + " + ";
+		result += std::to_string(i_chisl) + "/" + std::to_string(i_znam);
+	}
 	return result;
 }
 
