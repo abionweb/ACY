@@ -29,8 +29,7 @@ void Protocol::addRecord(char mod_attr, char old_v, char new_v) {
 int Protocol::addProtocolRecord(ProtocolRecord record) {
 	std::fstream stream(filename, std::ios::out|std::ios::app);
 	if(!stream) {
-		/*stream = make_file();
-		if(!stream)*/ return -1;
+		return -1;
 	}
 	stream << record;
 	stream.close();

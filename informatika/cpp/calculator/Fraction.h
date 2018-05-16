@@ -1,10 +1,3 @@
-/*
- * Fraction.h
- *
- *  Created on: 20 но€б. 2017 г.
- *      Author: Pavel.Bogdanov
- */
-
 #ifndef FRACTION_H_
 #define FRACTION_H_
 

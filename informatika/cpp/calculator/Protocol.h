@@ -8,8 +8,6 @@
 
 class Protocol {
 private:
-	//char modified_attr;
-	//std::string old_value;
 	std::fstream make_file();
 	std::string filename = "protocol";
 public:
