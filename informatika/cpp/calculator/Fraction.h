@@ -11,6 +11,7 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include "utils.h"
 
 class Fraction {
 public:
@@ -28,7 +29,6 @@ public:
 	std::string get_fraction_string();
 private:
 	float fract;
-	int get_NOD(int a, int b);
 };
 
 

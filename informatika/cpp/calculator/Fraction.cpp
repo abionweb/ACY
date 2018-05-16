@@ -101,12 +101,4 @@ std::string Fraction::get_fraction_string() {
 	return result;
 }
 
-int Fraction::get_NOD(int a, int b) {
-	int c;
-	while (b) {
-		c = a % b;
-		a = b;
-		b = c;
-	}
-	return a;
-}
+

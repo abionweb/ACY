@@ -1,4 +1,7 @@
 #include "Dialog.h"
+
+#include "Error.h"
+
 using namespace std;
 
 Dialog::Dialog(void) {
@@ -159,11 +162,16 @@ void Dialog::printCalc() {
 void Dialog::calculate() {
 	Fraction result_fraction;
 	std::string result_string;
-	c.execute();
-	result_fraction = c.get_result_fraction();
-	result_string = c.get_result_string();
-	c.set_op1(result_fraction);
-	cout << "Результат: " << result_string << endl;
+	try {
+		c.execute();
+		result_fraction = c.get_result_fraction();
+		result_string = c.get_result_string();
+		c.set_op1(result_fraction);
+		cout << "Результат: " << result_string << endl;
+	}
+	catch(Error& e) {
+		e.what();
+	}
 }
 
 int Dialog::Valid() {

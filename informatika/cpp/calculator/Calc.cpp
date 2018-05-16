@@ -1,4 +1,6 @@
 #include "Calc.h"
+
+#include "Error.h"
 #include "Fraction.h"
 
 Calc::Calc() {
@@ -48,6 +50,9 @@ void Calc::execute() {
 		res = op1 * op2;
 		break;
 	case '/':
+		if (op2.get_fract() == 0) {
+			throw Error("Ошибка: Деление на ноль");
+		}
 		res = op1 / op2;
 		break;
 	}
