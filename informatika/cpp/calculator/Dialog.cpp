@@ -27,15 +27,15 @@ void Dialog::GetEvent(TEvent &event) {
 	string param;
 	char code;
 
-	cout << endl << "s. Вывести статус калькулятора";
-	cout << endl << "1. Ввести первый оператор";
-	cout << endl << "2. Ввести второй оператор";
-	cout << endl << "o. Ввести знак операции";
-	cout << endl << "f. Ввести форму вывода";
-	cout << endl << "с. Рассчитать";
-	cout << endl << "p. Просмотреть протокол работы калькулятора";
-	cout << endl << "z. Отменить последний ввод";
-	cout << endl << "q. Завершить работу программы";
+	cout << endl << "s. Display the status of the calculator";
+	cout << endl << "1. Enter the first statement";
+	cout << endl << "2. Enter the second operator";
+	cout << endl << "o. Enter the operation sign";
+	cout << endl << "f. Enter the output form";
+	cout << endl << "c. Calculate";
+	cout << endl << "p. View the protocol of the calculator";
+	cout << endl << "z. Undo last entry";
+	cout << endl << "q. Quit the program";
 	cout << endl << '>';
 	cin >> s; code = s[0];
 	if (OpInt.find(code)>=0 and OpInt.find(code)<4294967290) {
@@ -94,7 +94,7 @@ void Dialog::HandleEvent(TEvent& event) {
 			ClearEvent(event);
 			break;
 		default:
-			cout << "Недопустимая команда. Попробуем ещё раз!" << endl;
+			cout << "Invalid command. Let's try again!" << endl;
 		}
 	}
 }
@@ -104,20 +104,20 @@ void Dialog::ClearEvent(TEvent& event) {
 }
 
 void Dialog::EndExec() {
-	cout << "До встречи!";
+	cout << "See you!";
 	EndState = 1;
 }
 
 void Dialog::enterOp1() {
 	string str;
-	cout << endl << "Пожалуйста, введите первый оператор (в формате 5.12 или 6,23 или 7/99)" << endl << ">";
+	cout << endl << "Please enter the first operator (in the format 5.12 or 6,23 or 7/99)" << endl << ">";
 	cin >> str;
 	c.set_op1(str);
 }
 
 void Dialog::enterOp2() {
 	string str;
-	cout << endl << "Пожалуйста, введите второй оператор (в формате 5.12 или 6,23 или 7/99)" << endl << ">";
+	cout << endl << "Please enter the second operator (in the format 5.12 or 6,23 or 7/99)" << endl << ">";
 	cin >> str;
 	c.set_op2(str);
 }
@@ -126,13 +126,13 @@ void Dialog::enterAction() {
 	string OpInt = "+-*/";
 	string str;
 	char code;
-	cout << endl << "Пожалуйста, введите символ операции ( + - * / )" << endl << ">";
+	cout << endl << "Please enter the operation symbol (+ - * /)" << endl << ">";
 	cin >> str;
 	code = str[0];
 	if (OpInt.find(code)>=0 and OpInt.find(code)<4294967290) {
 		c.set_action(code);
 	} else {
-		cout << "Недопустимая команда. Попробуем ещё раз!" << endl;
+		cout << "Invalid command. Let's try again!" << endl;
 	}
 }
 
@@ -140,22 +140,22 @@ void Dialog::enterForm() {
 	string OpInt = "./";
 	string str;
 	char code;
-	cout << endl << "Пожалуйста, введите символ формата вывода ( . / )" << endl << ">";
+	cout << endl << "Please enter the output format symbol ( . / )" << endl << ">";
 	cin >> str;
 	code = str[0];
 	if (OpInt.find(code)>=0 and OpInt.find(code)<4294967290) {
 		c.set_form(code);
 	} else {
-		cout << "Недопустимая команда. Попробуем ещё раз!" << endl;
+		cout << "Invalid command. Let's try again!" << endl;
 	}
 }
 
 void Dialog::printCalc() {
-	cout << endl << "Первый оператор: \t" << c.get_op1();
-	cout << endl << "Знак операции: \t\t" << c.get_action();
-	cout << endl << "Второй оператор: \t" << c.get_op2();
-	cout << endl << "Формат вывода: \t\t" << c.get_form();
-	cout << endl << "Результат:     \t\t" << c.get_result_fraction();
+	cout << endl << "First statement: \t"     << c.get_op1();
+	cout << endl << "Operation sign: \t\t"    << c.get_action();
+	cout << endl << "The second operator: \t" << c.get_op2();
+	cout << endl << "Output format: \t\t"     << c.get_form();
+	cout << endl << "Result:     \t\t"        << c.get_result_fraction();
 	cout << endl;
 }
 
@@ -167,7 +167,7 @@ void Dialog::calculate() {
 		result_fraction = c.get_result_fraction();
 		result_string = c.get_result_string();
 		c.set_op1(result_fraction);
-		cout << "Результат: " << result_string << endl;
+		cout << "Result: " << result_string << endl;
 	}
 	catch(Error& e) {
 		e.what();

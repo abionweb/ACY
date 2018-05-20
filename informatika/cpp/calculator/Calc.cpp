@@ -51,7 +51,7 @@ void Calc::execute() {
 		break;
 	case '/':
 		if (op2.get_fract() == 0) {
-			throw Error("ќшибка: ƒеление на ноль");
+			throw Error("Error: division by zero");
 		}
 		res = op1 / op2;
 		break;
@@ -61,7 +61,7 @@ void Calc::execute() {
 void Calc::undoLastEntry() {
 	ProtocolRecord r;
 	r = p.get_last_record();
-	cout << "ќтмен€ю: " << r << endl;
+	cout << "cancel: " << r << endl;
 	char code;
 	switch (r.mod_attr) {
 	case '1':
@@ -100,4 +100,5 @@ std::string Calc::get_result_string() {
 		return res.get_fraction_string();
 		break;
 	}
+	return "";
 }

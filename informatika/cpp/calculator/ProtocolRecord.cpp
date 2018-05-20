@@ -22,18 +22,18 @@ std::ostream& operator << (std::ostream &out, const ProtocolRecord& r) {
 	std::string attr;
 	switch (r.mod_attr) {
 	case '1':
-		attr = "первый оператор";
+		attr = "first operator";
 		break;
 	case '2':
-		attr = "второй оператор";
+		attr = "second operator";
 		break;
 	case 'a':
-		attr = "действие";
+		attr = "act";
 		break;
 	case 'f':
-		attr = "форму вывода";
+		attr = "output form";
 		break;
 	}
-	out << "Меняю " << attr << ". Старое значение: " << r.old_value << ". Новое значение: " << r.new_value << ".";
+	out << "A`m changing " << attr << ". Old value: " << r.old_value << ". New value: " << r.new_value << ".";
 	return out;
 }
