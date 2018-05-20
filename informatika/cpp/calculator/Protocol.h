@@ -21,8 +21,6 @@ public:
 	int addProtocolRecord(ProtocolRecord record);
 
 	ProtocolRecord get_last_record();
-	char get_modified_attr();
-	std::string get_old_value();
 
 	int print_protocol();
 };

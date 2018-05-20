@@ -14,7 +14,7 @@ public:
 
 	friend std::fstream& operator >> (std::fstream& fin, ProtocolRecord& r);
 	friend std::fstream& operator << (std::fstream& fout, const ProtocolRecord& r);
-	friend std::ostream& operator << (std::ostream &out, const ProtocolRecord& r);
+	friend std::ostream& operator << (std::ostream& out, const ProtocolRecord& r);
 };
 
 #endif /* PROTOCOLRECORD_H_ */
