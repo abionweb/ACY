@@ -29,12 +29,12 @@ int Dialog::enterInt(string q) {
 	return integer;
 }
 
-bool Dialog::enterManually() {
+int Dialog::enterInput() {
 	string answer;
 	bool not_valid = true;
 	do {
 		try {
-			cout << "Want to enter values manually?\n>";
+			cout << "How to enter elements? (m,r,f)\n>";
 			cin >> answer;
 			if (std::cin.good()) {
 				if (generalQuestionValid(answer)) {
@@ -51,15 +51,14 @@ bool Dialog::enterManually() {
 			e.what();
 		}
 	} while(not_valid);
-	if ((answer == "yes") or (answer == "y") or (answer == "manually")) {
-		return true;
-	} else {
-		return false;
-	}
+	if (answer == "manually" or answer == "m") return 1;
+	if (answer == "random" or answer == "r") return 2;
+	if (answer == "file" or answer == "f") return 3;
+	return 0;
 }
 
 bool Dialog::generalQuestionValid(string answer) {
-	if ((answer == "yes") or (answer == "y") or (answer == "manually") or (answer == "no") or (answer == "n") or (answer == "random")) {
+	if ((answer == "m") or (answer == "manually") or (answer == "random") or (answer == "r") or (answer == "file") or (answer == "f")) {
 		return true;
 	} else {
 		return false;

@@ -21,6 +21,6 @@ class EnterGeneralQuestion
 protected:
 	string msg;
 public:
-	EnterGeneralQuestion() {msg = "Input Error. allowed values 'yes', 'no', 'y', 'n', 'manually', 'random'.\n";};
+	EnterGeneralQuestion() {msg = "Input Error. allowed values 'manually', 'm', 'random', 'r', 'file', 'f'.\n";};
 	virtual void what() {cout << msg;};
 };

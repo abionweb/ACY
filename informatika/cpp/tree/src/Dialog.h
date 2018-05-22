@@ -12,7 +12,7 @@ public:
 	virtual ~Dialog(void) {};
 	int enterCount();
 	int enterElement();
-	bool enterManually();
+	int enterInput();
 private:
 	int enterInt(string q);
 	bool generalQuestionValid(string answer);
